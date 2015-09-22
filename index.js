@@ -18,7 +18,7 @@ module.exports = function styleSet (obj) {
 
         }
         else{
-            value = key;
+            value = val;
         }
 
         style[_.camelCase(key)] = value;
