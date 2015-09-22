@@ -8,7 +8,7 @@ module.exports = function styleSet (obj) {
 
         var value = "";
 
-        if (_.isObject(key)) {
+        if (_.isObject(val)) {
 
             _.each(val , function (n , k) {
                 if (n) {
