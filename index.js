@@ -1,7 +1,7 @@
 var _ = require('lodash');
 
 module.exports = function styleSet (obj) {
-    
+
     var style = {}
 
     _.each(obj , function ( val , key) {
@@ -26,11 +26,3 @@ module.exports = function styleSet (obj) {
 
     return style;
 }
-
-/*
-var style = styleSet({
-    'background-color' : {
-        red : true,
-    },
-    color : color
-})*/
