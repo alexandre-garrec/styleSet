@@ -1,6 +1,6 @@
 var _ = require('lodash');
 
-module.exports = function styleSet (obj) {
+var styleSet =  module.exports = function styleSet (obj) {
 
     var style = {}
 
