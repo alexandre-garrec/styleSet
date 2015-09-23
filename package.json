@@ -1,15 +1,25 @@
 {
   "name": "style-set",
-  "version": "1.0.5",
+  "version": "1.0.9",
   "description": "",
   "main": "index.js",
-  "repository" : {
-        "type" : "git",
-        "url" : "https://github.com/alexandre-garrec/styleSet"
-    },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexandre-garrec/styleSet"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "react",
+    "styleSet",
+    "styleset",
+    "style-Set",
+    "style-set"
+  ],
   "author": "alexandre-garrec",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  }
 }
