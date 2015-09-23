@@ -1,5 +1,6 @@
 # StyleSet
 
+![travis](https://travis-ci.org/alexandre-garrec/styleSet.svg)
 
 Install with npm 
 -----
