@@ -1,28 +1,38 @@
-var _ = require('lodash');
-
 var styleSet =  module.exports = function styleSet (obj) {
 
     var style = {}
 
-    _.each(obj , function ( val , key) {
+    for(var key in obj) { 
 
-        var value = "";
+       if (obj.hasOwnProperty(key)) {
+            var value = "";
+            var attr = obj[key];
 
-        if (_.isObject(val)) {
+            if (attr instanceof Object) {
 
-            _.each(val , function (n , k) {
-                if (n) {
-                    value = k;
+                for(var k in attr) { 
+                    if (attr.hasOwnProperty(k)) {
+                        var n = attr[k];
+
+                        if (n) {
+                            value = k;
+                        };
+                    }
                 }
-            })
 
-        }
-        else{
-            value = val;
-        }
-
-        style[_.camelCase(key)] = value;
-    })
+            }
+            else{
+                value = attr;
+            }
+            
+            var styleKey = key.replace( /[-_]+/g, ' ')
+                .replace( /[^\w\s]/g, '')
+                .replace( / (.)/g, function($1) { return $1.toUpperCase(); })
+                .replace( / /g, '' );
+                
+            style[styleKey] = value;
+       }
+    }
 
     return style;
 }

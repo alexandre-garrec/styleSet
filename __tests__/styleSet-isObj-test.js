@@ -1,5 +1,4 @@
-jest.dontMock('../index')
-    .dontMock('lodash');
+jest.dontMock('../index');
 
 describe('styleSet', function() {
 
