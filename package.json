@@ -1,6 +1,6 @@
 {
   "name": "style-set",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "https://github.com/alexandre-garrec/styleSet"
   },
   "scripts": {
-    "build" : "browserify index.js -o ./build/styleSet.js",
+    "build" : "browserify ./index.js -o ./build/styleSet.js",
     "test": "jest"
   },
   "keywords": [
