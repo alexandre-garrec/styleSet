@@ -30,4 +30,6 @@ Exemple :
             white : false
         },
         color : color
-    })
+    });
+
+    style.set('height' , '200px');
