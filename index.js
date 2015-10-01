@@ -5,7 +5,7 @@
  */
 var styleSet =  module.exports = function styleSet (obj) {
 
-    /* User for IE compatibility */
+    /* Use for IE compatibility */
     function Style () {};
 
     /* Set custom prototype */
