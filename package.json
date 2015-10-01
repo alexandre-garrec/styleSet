@@ -18,6 +18,9 @@
     "style-Set",
     "style-set"
   ],
+  "jest": {
+  "setupTestFrameworkScriptFile": "./jest/customMatchers.js"
+  },
   "author": "alexandre-garrec",
   "license": "MIT",
   "dependencies": {

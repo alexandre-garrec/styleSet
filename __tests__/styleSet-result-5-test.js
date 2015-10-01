@@ -19,7 +19,7 @@ describe('styleSet', function() {
 
         var expected = { backgroundColor: 'red' , color : "red" , zIndex : 11 , height : "5555px"};
 
-        expect(styleSet(current)).toEqual(expected);
+        expect(styleSet(current)).isSameObject(expected);
     });
 });
   

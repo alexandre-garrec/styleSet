@@ -9,8 +9,7 @@ StyleSet is a Javascript library to create CSS
 Install with npm 
 -----
 
-    $ npm install style-set
-
+    $ npm install style-set --save
 
 
 Usage
@@ -19,6 +18,7 @@ Usage
 Use with node.js
 
     var styleSet = require('style-set');
+
 
 Exemple : 
 
@@ -31,5 +31,12 @@ Exemple :
         },
         color : color
     });
-
+    
+    // Append or edit style
     style.set('height' , '200px');
+
+
+License
+-------
+
+[MIT License](https://opensource.org/licenses/MIT)

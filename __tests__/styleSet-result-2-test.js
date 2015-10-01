@@ -6,16 +6,18 @@ describe('styleSet', function() {
 
         var styleSet = require('../index');
 
-        var current = {
+        var current = styleSet({
                 'background-color' : {
                         red : false,
                         white : true 
                     }
-            };
+            });
+
 
         var expected = { backgroundColor: 'white' };
 
-        expect(styleSet(current)).toEqual(expected);
+
+        expect(current).isSameObject(expected);
     });
 });
   

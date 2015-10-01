@@ -7,7 +7,7 @@ describe('styleSet', function() {
         var styleSet = require('../index');
         var red = "red";
 
-        var expected = { padding : "2px" , margin : '10px' , height : '200px'};
+        var expected = { padding : "2px" , margin : '10px' , height : '200px' , width : '300px'};
 
         var style = styleSet()
             .set('padding' , '1px')
@@ -16,7 +16,9 @@ describe('styleSet', function() {
 
         style.set('height' , '200px');
 
-        expect(style).toEqual(expected);
+        style.set('width' , '300px');
+        
+        expect(style).isSameObject(expected);
     });
 });
   

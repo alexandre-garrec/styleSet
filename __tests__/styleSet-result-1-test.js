@@ -15,7 +15,10 @@ describe('styleSet', function() {
 
         var expected = { backgroundColor: 'red' };
 
-        expect(styleSet(current)).toEqual(expected);
+        var style = styleSet(current);
+
+
+        expect(style).isSameObject(expected);
     });
 });
   

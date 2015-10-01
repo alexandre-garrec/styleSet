@@ -5,22 +5,27 @@
  */
 var styleSet =  module.exports = function styleSet (obj) {
 
-    // Private vars
-    var _style = {}
+    /* User for IE compatibility */
+    function Style () {};
 
-    // Custom proto
-    _style.__proto__.set = function(key , val) {
-        _style[_camelCase(key)] = val;
-        return this;
+    /* Set custom prototype */
+    Style.prototype = {
+
+        set : function(key , val) {
+            this[_camelCase(key)] = val;
+            return this;
+        },
+        remove : function(key) {
+            delete this[_camelCase(key)];
+            return this;
+        }
+        
     };
 
-    _style.__proto__.remove = function(key) {
-        delete _style[_camelCase(key)];
-        return this;
-    };
+    /* Private vars */
+    var _style = new Style();
 
-
-    // Constructor
+    /* Constructor */
     var _constructor = function() {
 
         for(var key in obj) { 
@@ -37,6 +42,7 @@ var styleSet =  module.exports = function styleSet (obj) {
 
                             if (n) {
                                 value = k;
+                                break;
                             };
                         }
                     }
@@ -46,7 +52,7 @@ var styleSet =  module.exports = function styleSet (obj) {
                     value = attr;
                 }
                     
-                _style[_camelCase(key)] = value;
+                _style.set( _camelCase(key) , value );
 
            }
         }
@@ -54,7 +60,6 @@ var styleSet =  module.exports = function styleSet (obj) {
         return _style;
 
     };
-
 
     /**
      * Convert string to camel case
@@ -68,6 +73,6 @@ var styleSet =  module.exports = function styleSet (obj) {
                 .replace( / /g, '' );
     };
   
-    // Run
+    /* Run */
     return _constructor();
 }

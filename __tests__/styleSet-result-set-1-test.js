@@ -1,5 +1,6 @@
 jest.dontMock('../index');
 
+
 describe('styleSet', function() {
 
     it('verify result', function() {
@@ -7,13 +8,14 @@ describe('styleSet', function() {
         var styleSet = require('../index');
         var red = "red";
 
+        var expected = { color : 'red' , padding : "1px" };
 
-        var expected = { padding : "1px" , color : 'red'};
+        var val = styleSet({color:red});
 
-        var val = styleSet({color:red}).set('padding' , '1px');
+        val.set('padding' , '1px');
+        
 
-
-        expect(val).toEqual(expected);
+        expect(val).isSameObject(expected);
     });
 });
   
